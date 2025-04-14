@@ -12,13 +12,13 @@
     />
   </head>
   <body>
-    <header class="grid-con col-span-full" id="header-flex">
+    <header class="full-width-grid-con" id="header-flex">
       <h1 class="hidden">Welcome to ZIMA</h1>
-      <div id="header-logo" class="m-col-span-2">
+      <div id="header-logo" class="grid-con m-col-span-2">
         <img src="images/logo-zima.png" alt="logo" />
       </div>
 
-      <div class="m-col-start-2 m-col-end-12">
+      <div class="m-col-start-2 m-col-end-8">
         <nav id="main-nav">
           <h2 class="hidden">Main Navigation</h2>
 
@@ -27,7 +27,7 @@
             <img
               src="images/burger.svg"
               alt="burger nav container"
-              class="hamberger-nav"
+              class="hamburger-nav"
             />
           </label>
 
@@ -36,16 +36,73 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="#">Flavors</a></li>
-              <li class="promotion"><a href="#">Promotion</a></li>
+              <li class="promotion"><a href="promotion.html">Promotion</a></li>
               <li><a href="#">About</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
+
         </nav>
       </div>
+
+          <div id="header-icons" class="m-col-start-9 m-col-end-12">
+            <a href="#" id="search-icon">
+              <i class="fas fa-search"></i>
+            </a>
+            <a href="#" id="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+
+          </div>
     </header>
 
-    
+    <section class="promotion-section">
+      <h2 class="col-span-full m-col-end-5 m-col-end-8 l-col-end-5 l-col-end-8">PROMOTION</h2>
+
+      <div class="video-container col-span-full m-col-span-full l-col-span-full">
+        <video autoplay muted controls playsinline>
+          <source src="videos/promo_video.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <h2 class="col-span-full m-col-start-2 m-col-end-10 l-col-start-2 l-col-end-10">Explore a World of Possibilities with <span>ZIMA</span></h2>
+      <h3 class="subheading col-span-full m-col-start-4 m-col-end-9 l-col-start-4 l-col-end-9">Find ZIMA at the sports events!</h3>
+
+      <h2 class="section-title col-span-full m-col-end-5 m-col-end-8 l-col-end-5 l-col-end-8">Special Promotions</h2>
+
+      <div class="promo-cards">
+        <div class="card col-span-full m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-4">
+          <img src="images/coaster.jpeg" alt="Zima Coaster" class="card-img">
+          <h3>Original Design Coaster</h3>
+          
+          <p>
+      Get a ZIMA original design coaster at the sports event we sponsored!
+      Don’t forget to get special coupon on the coaster.
+          </p>
+          <a href="#" class="btn">Learn more</a>
+        </div>
+
+        <div class="card col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9">
+          <img src="images/openner.jpeg" alt="ZIMA Bottle Opener" class="card-img" />
+          <h3>Bottle Opener</h3>
+          <p>
+            We have portable key chain bottle opener. Get opener with ZIMA and you have no trouble opening the bottle!
+          </p>
+          <a href="#" class="btn">Learn more</a>
+        </div>
+
+        <div class="card col-span-full m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13">
+          <img src="images/water.jpeg" alt="ZIMA Flavor Water" class="card-img" />
+          <h3>Flavor Water</h3>
+          <p>
+            Collaborate with smartwater, we have ZIMA original flavored water. Enjoy refresh, cool, and new version of ZIMA.
+          </p>
+          <a href="#" class="btn">Learn more</a>
+        </div>
+      
+      </div>
+    </section>
+
 
     <footer>
       <div class="full-width-grid-con">
