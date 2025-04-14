@@ -1,5 +1,4 @@
 #header-flex {
-<<<<<<< HEAD
   display: flex;
   justify-content: space-evenly;
 }
@@ -182,24 +181,15 @@ header {
   }
   25% {
     transform: rotateY(90deg) scale(1.2);
-=======
+
     display: flex;
     justify-content: space-between;
   }
   
-  #header-logo {
-    padding-top: 30px;
-    margin-top: 0;
-    margin-left: 30px;
-    align-items: center;
-    transform: scale(0.6);
-    transform-origin: top left;
->>>>>>> 640d6ce58c937a01030fa55365d05160ce447360
-  }
   50% {
     transform: rotateY(180deg) scale(1.4);
   }
-<<<<<<< HEAD
+
   75% {
     transform: rotateY(270deg) scale(1.2);
   }
@@ -653,8 +643,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   body {
-    font-size: 1.2em;
-=======
+    font-size: 1.2em;}
   
   /*Main Nav*/
   
@@ -668,7 +657,6 @@ footer {
 
   #main-nav #burger-con ul li {
     padding: 10px 0;
->>>>>>> 640d6ce58c937a01030fa55365d05160ce447360
   }
 
   header {
@@ -699,7 +687,6 @@ footer {
   #burger-con label {
     display: none;
   }
-<<<<<<< HEAD
 
   #main-nav label img {
     display: none;
@@ -711,8 +698,7 @@ footer {
   }
 
   #main-nav #burger-con ul li {
-    display: inline-block;
-=======
+    display: inline-block;}
   
   #burger-con {
     position: fixed;
@@ -747,7 +733,6 @@ footer {
   }
   
   #main-nav ul {
->>>>>>> 640d6ce58c937a01030fa55365d05160ce447360
     list-style: none;
     padding: 0 20px;
     margin-top: 13px;
@@ -763,8 +748,6 @@ footer {
   }
 
   #main-nav ul li {
-<<<<<<< HEAD
-=======
     border-bottom: 1px solid #efefef;
   }
 
@@ -773,7 +756,6 @@ footer {
   }
   
   #main-nav ul li:last-child {
->>>>>>> 640d6ce58c937a01030fa55365d05160ce447360
     border-bottom: none;
   }
 
@@ -1317,10 +1299,8 @@ footer {
     display: flex;
     justify-content: space-evenly;
   }
-<<<<<<< HEAD
 
   /*Promotion Page*/
-=======
   
   #footer-icon div img {
     cursor: pointer;
@@ -1570,7 +1550,6 @@ footer {
     }
   
     /*Promotion Page*/
->>>>>>> 640d6ce58c937a01030fa55365d05160ce447360
 
   .promotion-section {
     padding: 60px 20px;
@@ -1581,14 +1560,12 @@ footer {
 
   .promotion-section h2 {
     font-size: 1.5rem;
-<<<<<<< HEAD
     margin-bottom: 20px;
     color: #222;
   }
 
   .promotion-section h2 span {
     color: #007bff;
-=======
   margin-bottom: 20px;
   color: #222;
 }
@@ -2056,7 +2033,6 @@ footer {
         width: 150px;
     }
 
->>>>>>> 640d6ce58c937a01030fa55365d05160ce447360
   }
 
   .subheading {
