@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to ZIMA</title>
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="full-width-grid-con" id="header-flex">
+      <h1 class="hidden">Welcome to ZIMA</h1>
+      <div id="header-logo" class="grid-con m-col-span-2">
+        <img src="images/logo-zima.png" alt="logo" />
+      </div>
+
+      <div class="m-col-start-2 m-col-end-8">
+        <nav id="main-nav">
+          <h2 class="hidden">Main Navigation</h2>
+
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <img
+              src="images/burger.svg"
+              alt="burger nav container"
+              class="hamburger-nav"
+            />
+          </label>
+
+          <div id="burger-con">
+            <label for="hamburger" class="close-btn">✕</label>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Flavors</a></li>
+              <li class="promotion"><a href="promotion.html">Promotion</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+
+          <div id="header-icons" class="m-col-start-9 m-col-end-12">
+            <a href="#" id="search-icon">
+              <i class="fas fa-search"></i>
+            </a>
+            <a href="#" id="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+
+          </div>
+    </header>
+
+    <section id="cinemagraph">
+      <h2 class="hidden">Cinemagraph</h2>
+      <video
+        src="videos/zima_cinemagrah_1.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </section>
+
+
+    <section id="intro" class="full-width-grid-con">
+      <div class="grid-con col-span-full">
+        <p class="col-span-2 m-col-start-2 m-col-end-7 l-col-start-2 l-col-end-7">ZIMA brings a refreshing twist to your favorite sparkling beverage, blending crisp flavor with a light, vibrant feel. Perfect for relaxing moments, ZIMA offers a cool and stylish drinking experience you'll love.</p>
+        <p class="col-start-1 col-end-2 m-col-start-3 m-col-end-5 l-col-start-3 l-col-end-5">SHOP NOW</p>
+        </div>
+    </section>
+
+    <section class="carousel grid-con">
+      <div id="flavors" class="col-span-full">
+        <h2 class="flavors-title">Flavors</h2>
+        <div id="original" class="flavor-slide active" data-id="original">
+          <img src="images/flavor-original.png" alt="Original" />
+        </div>
+
+        <div id="blood-orange" class="flavor-slide" data-id="bloodOrange">
+          <img src="images/flavor-bloodorange.png" alt="Blood Orange" />
+        </div>
+
+        <div id="green-grapes" class="flavor-slide" data-id="greenGrapes">
+          <img src="images/flavor-greengrapes.png" alt="Green Grapes" />
+        </div>
+
+        <div class="carousel-dots">
+          <span class="dot active" onclick="flipTo(0)"></span>
+          <span class="dot" onclick="flipTo(1)"></span>
+          <span class="dot" onclick="flipTo(2)"></span>
+        </div>
+      </div>
+
+      <div class="bottle-detail" id="Original">
+        <h3>ZIMA Original</h3>
+        <p>Refreshing lemon and lime flavor.
+          Enjoy drink as it is and find your own
+          favorite cocktail with original flavor!</p>
+        <p><span>Alcohol:</span> 5.2%</p>
+        <p class="aline-right">Amount Per Serving</p>
+        <ul>
+          <li>Calories&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;150</li>
+          <li>Total Fat &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;0%</li>
+          <li>Cholesterol&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;0%</li>
+          <li>Total Carbohyfrate&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 4.7%</li>
+          <li>Protain &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;1g</li>
+        </ul>
+      </div>
+
+      <div class="bottle-detail" id="bloodOrange">
+        <h3>ZIMA Blood Orange</h3>
+        <p>Bold and juicy blood orange flavor.
+          Enjoy it on its own or mix it into your favorite cocktail for a zesty twist!</p>
+        <p><span>Alcohol:</span> 5.2%</p>
+        <p class="aline-right">Amount Per Serving</p>
+        <ul>
+          <li>Calories&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;150</li>
+          <li>Total Fat &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;0%</li>
+          <li>Cholesterol&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;0%</li>
+          <li>Total Carbohyfrate&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 4.7%</li>
+          <li>Protain &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;1g</li>
+        </ul>
+      </div>
+
+      <div class="bottle-detail" id="greenGrapes">
+        <h3>ZIMA Green Grapes</h3>
+        <p>Crisp and sweet green grape flavor.
+Refresh yourself or create a smooth cocktail with this fruity delight!</p>
+        <p><span>Alcohol:</span> 5.2%</p>
+        <p class="aline-right">Amount Per Serving</p>
+        <ul>
+          <li>Calories&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;150</li>
+          <li>Total Fat &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;0%</li>
+          <li>Cholesterol&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;0%</li>
+          <li>Total Carbohyfrate&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 4.7%</li>
+          <li>Protain &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;1g</li>
+        </ul>
+      </div>
+    </section>
+
+    <div id="recipe-bg" class="full-width-grid-con">
+    <section id="recipe" class="grid-con col-span-full">
+        <h2 class="col-span-full">Recipes using ZIMA</h2>
+
+        <div class="hero-recipe col-span-full">
+            <div class="cocktails martini">
+                <img sizes="
+                (min-width: 950px) 300px,
+                (min-width: 200px) 250px,
+                100vw"
+                
+                srcset="
+                images/martini_250.png 250w,
+                images/martini_300_411.png 300w"
+                src="images/martini_250.png" alt="image of martini">
+                <div class="hover-text">Learn More →</div>
+            </div>
+
+            <div class="cocktails fizz">
+                <img sizes="
+                (min-width: 950px) 300px,
+                (min-width: 200px) 250px,
+                100vw"
+                
+                srcset="
+                images/fizz_250.png 250w,
+                images/fizz_300_411.png 300w"
+                src="images/fizz_250.png" alt="image of fizz">
+                <div class="hover-text">Learn More →</div>
+            </div>
+
+            <div class="cocktails moscowMule">
+                <img sizes="
+                (min-width: 950px) 300px,
+                (min-width: 200px) 250px,
+                100vw"
+                
+                srcset="
+                images/moscpwMule_250.png 250w,
+                images/moscowMule_300_411.png 300w"
+                src="images/moscowMule_250.png" alt="image of mos cowMule">
+                <div class="hover-text">Learn More →</div>
+            </div>
+        </div>
+    </section>
+    </div>
+    
+
+    <div class="grid-con">
+      <h2 id="followUs" class="col-span-full">Follow Us!</h2>
+        <div class="instagram col-span-full">
+                <h3>@ZIMAofficial</h3>
+        </div>
+        </div>
+
+        <div id="instagram-pic-container">
+            <div id="instagram-pic">
+                <img src="images/ig-1.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-2.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-3.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-4.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-5.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-6.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-7.png" alt="instagram ex image" class="ig-pic">
+                <img src="images/ig-8.png" alt="instagram ex image" class="ig-pic">
+            </div>
+        </div>
+        <div id="arrows" class="grid-con col-span-full">
+            <a href="#" id="left-arrow" class="arrow">&#60;</a>
+            <a href="#" id="right-arrow" class="arrow">&#62;</a>
+        </div>
+
+
+    <footer>
+      <div class="full-width-grid-con">
+        <div class="grid-con col-span-full">
+          <div id="footer-logo" class="col-span-2">
+            <img src="images/footer-logo.png" alt="logo" />
+          </div>
+
+          <div class="col-start-3 col-span-2 m-col-span-1">
+            <nav id="m-footer-nav">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li class="promotion"><a href="">Promotion</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="m-col-start-5" id="home">
+            <nav class="m-l-footer-nav">
+              <ul>
+                <li class="bold"><a href="">Home</a></li>
+                <li><a href="">Original</a></li>
+                <li><a href="">Blood Orange</a></li>
+                <li><a href="">Green Grapes</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="m-col-start-7">
+            <nav class="m-l-footer-nav">
+              <ul>
+                <li class="bold"><a href="">Promotion</a></li>
+                <li><a href="">Event</a></li>
+                <li><a href="">Gift</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="m-col-start-9">
+            <nav class="m-l-footer-nav">
+              <ul>
+                <li class="bold"><a href="">About</a></li>
+                <li><a href="">Reviews</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="m-col-start-11">
+            <nav class="m-l-footer-nav">
+              <ul>
+                <li class="bold"><a href="">Contact</a></li>
+                <li><a href="">Form</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">YouTube</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div id="line" class="col-span-full"></div>
+
+          <nav id="footer-sec-nav" class="col-span-2 m-col-span-4">
+            <ul>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Policy</a></li>
+            </ul>
+          </nav>
+
+          <div id="footer-icon" class="m-col-start-5">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios/50/FFFFFF/instagram-new--v1.png"
+                alt="Instagram Icon"
+              />
+            </div>
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios/50/FFFFFF/youtube-play--v1.png"
+                alt="YouTube Icon"
+              />
+            </div>
+          </div>
+
+          <div id="footer-sec-logo" class="m-col-start-10">
+            <img src="images/footer-sec-logo.png" alt="logo" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
