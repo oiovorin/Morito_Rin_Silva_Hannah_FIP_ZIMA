@@ -883,6 +883,106 @@
       margin-left: 580px;
     }
   
+    /*Promotion Page*/
+
+  .promotion-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+  }
+
+  .promotion-section h2 {
+    font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.promotion-section h2 span {
+  color: #007bff;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: #222;
+}
+
+/* Vídeo responsivo */
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.promo-cards {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Layout de cada card */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+}
+
+/* Imagem com canto superior arredondado */
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 15px;
+}
+
+/* Texto dentro do card */
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background-color: #01497cbd;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
   
     /*Footer*/
   
@@ -1152,5 +1252,106 @@
       display: flex;
       justify-content: space-evenly;
     }
+
+    /*Promotion Page*/
+
+  .promotion-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+  }
+
+  .promotion-section h2 {
+    font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.promotion-section h2 span {
+  color: #007bff;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: #222;
+}
+
+/* Vídeo responsivo */
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.promo-cards {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Layout de cada card */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+}
+
+/* Imagem com canto superior arredondado */
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 15px;
+}
+
+/* Texto dentro do card */
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background-color: #01497cbd;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
   }
   
