@@ -711,6 +711,26 @@ footer {
   display: none;
 }
 
+/* lemon style */
+#Lemon {
+    transition: all 0.7s ease;
+}
+
+#Lemon:hover {
+    transform: scaleX(0.6);
+}
+
+#Lemon:hover #outer_skin {
+    fill: coral;
+    transition: fill 0.5s ease
+}
+
+#Lemon:hover #pulp {
+    transform: scale(1.1);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
 /*Media Query*/
 
 @media screen and (min-width: 768px) {
@@ -1131,7 +1151,6 @@ footer {
 
   .m-l-footer-nav {
     display: block;
-    text-align: center;
     padding-top: 30px;
   }
 
@@ -1141,7 +1160,7 @@ footer {
   }
 
   .m-l-footer-nav ul li a {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
 
   .m-l-footer-nav ul {
@@ -1149,8 +1168,9 @@ footer {
     margin: 0 auto;
   }
 
-  .m-l-footer-nav ul li a.bold {
-    font-size: 1em !important;
+  .m-l-footer-nav ul li a span {
+    font-size: 1em;
+    font-weight: bold;
   }
 
   #footer-icon {
@@ -1163,6 +1183,10 @@ footer {
 
   #footer-sec-logo img {
     scale: 70%;
+  }
+
+  #home {
+    width: 130px;
   }
 
   /* contact page style */
@@ -2199,4 +2223,25 @@ footer {
   .btn:hover {
     background-color: #0056b3;
   }
+
+  #footer-logo {
+    scale: 80%;
+  }
+
+
+
+  .m-l-footer-nav ul li a {
+    font-size: 0.9em;
+  }
+
+  
+  #home {
+      width: 150px;
+  }
+
+  .m-l-footer-nav ul li a span {
+      font-weight: bold;
+      font-size: 1.1em;
+  }
+
 }
