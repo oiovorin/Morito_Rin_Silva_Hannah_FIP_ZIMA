@@ -28,13 +28,32 @@ function flipTo(index) {
     });
   }
 
-    
+// Promotion cards
+const readMoreButtons = document.querySelectorAll('.btn[data-index]');
+const lightboxes = document.querySelectorAll('.lightbox1, .lightbox3');
+const closeButtons = document.querySelectorAll('.lightbox-close');
 
-    
+// Open the corresponding lightbox
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', e => {
+    e.preventDefault();
+    const index = button.getAttribute('data-index');
+    const lightbox = lightboxes[index];
+    if (lightbox) {
+      lightbox.classList.add('active');
+    }
+  });
+});
 
-
-  
-
+// Close lightbox when clicking close button
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const lightbox = button.closest('.lightbox1, .lightbox3');
+    if (lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
+});
 
 // instagram carousel
 const carousel = document.querySelector('#instagram-pic');
