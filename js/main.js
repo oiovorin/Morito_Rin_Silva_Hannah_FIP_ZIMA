@@ -33,41 +33,28 @@ function flipTo(index) {
 // Selecione todos os botões com a classe "btn"
 const promoButtons = document.querySelectorAll('.btn');
 
-// Selecione todos os lightboxes
-const lightboxes = document.querySelectorAll('.lightbox');
-
-// Selecione os botões de fechar
-const closeButtons = document.querySelectorAll('.lightbox-close');
-
 // Adicione um event listener para cada botão
 promoButtons.forEach(button => {
   button.addEventListener('click', (event) => {
+    // Evitar o comportamento padrão do link
     event.preventDefault();
     
-    // Acesse o nome do lightbox correspondente
-    const lightboxClass = button.getAttribute('data-lightbox');
+    // Acesse o index do botão clicado usando o atributo data-index
+    const index = button.getAttribute('data-index');
     
-    // Selecione o lightbox específico com base na classe
-    const lightbox = document.querySelector(`.${lightboxClass}`);
-    
-    // Mostrar o lightbox
-    lightbox.style.display = 'flex';
-  });
-});
-
-// Fechar o lightbox ao clicar no botão de fechar
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const lightbox = button.closest('.lightbox');
-    lightbox.style.display = 'none';
-  });
-});
-
-// Fechar o lightbox se clicar fora da área de conteúdo
-lightboxes.forEach(lightbox => {
-  lightbox.addEventListener('click', (event) => {
-    if (event.target === lightbox) {
-      lightbox.style.display = 'none';
+    // Baseado no index, podemos mostrar um alerta ou abrir uma nova seção com mais informações
+    switch(index) {
+      case '0':
+        alert('Você clicou no ZIMA Coaster! Descubra todos os detalhes e promoções especiais no evento.');
+        break;
+      case '1':
+        alert('Você clicou no ZIMA Bottle Opener! Veja mais sobre nosso abridor de garrafas portátil.');
+        break;
+      case '2':
+        alert('Você clicou no ZIMA Flavored Water! Aproveite a nossa água com sabor e refresque-se!');
+        break;
+      default:
+        alert('Item desconhecido');
     }
   });
 });

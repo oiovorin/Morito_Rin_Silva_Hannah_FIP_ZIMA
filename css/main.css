@@ -510,38 +510,50 @@ header {
   justify-content: center;
   align-items: center;
 }
-.lightbox {
-  display: none; /* Inicialmente invisível */
+/* Lightbox */
+.lightbox1,
+.lightbox3 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  justify-content: center;
+  display: none; 
   align-items: center;
-}
-
-.lightbox-content {
-  background-color: white;
+  justify-content: center;
+  z-index: 1000;
   padding: 20px;
-  max-width: 500px;
-  width: 90%;
-  border-radius: 10px;
-  text-align: center;
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  cursor: pointer;
+.lightbox1.active,
+.lightbox3.active {
+  display: flex;
 }
 
-h3, p {
-  margin-top: 20px;
+.lightbox-content,
+.lightbox-content3 {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: left;
+}
+
+.lightbox-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #01497c;
+}
+
+.lightbox-text,
+.lightbox-text3 {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
 }
 
 /* Close Btn */
