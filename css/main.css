@@ -494,7 +494,7 @@ header {
   border-radius: 25px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  
+  height: 150px;
 }
 
 .btn:hover {
@@ -727,8 +727,8 @@ footer {
 #Lemon {
   width: 160px;
   height: auto;
-    transition: all 0.7s ease;
-    margin: 25px;
+  transition: all 0.7s ease;
+  padding: 15px;
 }
 
 #Lemon:hover {
@@ -771,6 +771,7 @@ footer {
   width: 130px;
   height: auto;
   margin-left: 10px;
+  padding: 5px;
 }
 
 #Logomark:hover #main_flake {
