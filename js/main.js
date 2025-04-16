@@ -1,3 +1,5 @@
+//Bottles in home page 
+
 function flipTo(index) {
     const slides = document.querySelectorAll(".flavor-slide img");
     const dots = document.querySelectorAll(".dot");
