@@ -33,45 +33,35 @@ function flipTo(index) {
 // Selecione todos os botões com a classe "btn"
 const promoButtons = document.querySelectorAll('.btn');
 
-// Selecione todos os lightboxes
-const lightboxes = document.querySelectorAll('.lightbox1, .lightbox3');
+// Selecione os lightboxes
+const lightbox1 = document.querySelector('.lightbox1');
+const lightboxGroup = document.querySelectorAll('.lightbox3');
+
+// Junta todos em uma lista
+const lightboxes = [lightbox1, ...lightboxGroup];
 
 // Adicione um event listener para cada botão
 promoButtons.forEach(button => {
   button.addEventListener('click', (event) => {
-    // Evitar o comportamento padrão do link
     event.preventDefault();
-    
-    // Acesse o index do botão clicado usando o atributo data-index
-    const index = button.getAttribute('data-index');
-    
+
+    const index = parseInt(button.getAttribute('data-index'));
+
     // Ocultar todos os lightboxes
-    lightboxes.forEach(lightbox => {
-      lightbox.style.display = 'none';
-    });
-    
-    // Exibir o lightbox correspondente com base no index
-    switch(index) {
-      case '0':
-        document.querySelector('.lightbox1').style.display = 'block';
-        break;
-      case '1':
-        document.querySelector('.lightbox3:nth-of-type(1)').style.display = 'block';
-        break;
-      case '2':
-        document.querySelector('.lightbox3:nth-of-type(2)').style.display = 'block';
-        break;
-      default:
-        alert('Item desconhecido');
+    lightboxes.forEach(lb => lb.style.display = 'none');
+
+    // Exibir o lightbox correspondente
+    if (lightboxes[index]) {
+      lightboxes[index].style.display = 'flex';
     }
   });
 });
 
-// Fechar o lightbox ao clicar no botão de fechar
-document.querySelectorAll('.lightbox-close').forEach(closeButton => {
-  closeButton.addEventListener('click', () => {
-    // Fechar o lightbox
-    closeButton.closest('.lightbox1, .lightbox3').style.display = 'none';
+// Adicione event listener aos botões de fechar
+document.querySelectorAll('.lightbox-close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    const lightbox = closeBtn.closest('.lightbox1, .lightbox3');
+    if (lightbox) lightbox.style.display = 'none';
   });
 });
 
