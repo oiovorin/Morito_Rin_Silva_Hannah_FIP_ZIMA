@@ -57,3 +57,17 @@ Please follow these steps:
 This project is licensed under the **MIT License**
 
 ## Paper Plan for JavaScript
+![js paper plan](images/zima_plan/FIP_Paper_Plan-01.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-02.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-03.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-04.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-05.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-06.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-07.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-08.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-09.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-10.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-11.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-12.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-13.png)
+![js paper plan](images/zima_plan/FIP_Paper_Plan-14.png)
