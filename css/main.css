@@ -524,13 +524,21 @@ header {
   justify-content: center;
   z-index: 1000;
   padding: 20px;
+
+  /* Fade settings */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox1.active,
 .lightbox3.active {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* Animação interna do conteúdo */
 .lightbox-content,
 .lightbox-content3 {
   background-color: #fff;
@@ -541,6 +549,20 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   text-align: left;
+
+  /* Animação ao aparecer */
+  animation: fadeInScale 0.4s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .lightbox-title {
@@ -573,6 +595,7 @@ header {
 .lightbox-close:hover {
   color: #01497c;
 }
+
 
 /* lemon style */
 #Lemon {
@@ -1157,18 +1180,26 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  display: none; /* escondido por padrão */
+  display: none; 
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 20px;
+
+  /* Fade settings */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox1.active,
 .lightbox3.active {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* Animação interna do conteúdo */
 .lightbox-content,
 .lightbox-content3 {
   background-color: #fff;
@@ -1179,6 +1210,20 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   text-align: left;
+
+  /* Animação ao aparecer */
+  animation: fadeInScale 0.4s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .lightbox-title {
@@ -1798,13 +1843,21 @@ footer {
   justify-content: center;
   z-index: 1000;
   padding: 20px;
+
+  /* Fade settings */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox1.active,
 .lightbox3.active {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* Animação interna do conteúdo */
 .lightbox-content,
 .lightbox-content3 {
   background-color: #fff;
@@ -1815,6 +1868,20 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   text-align: left;
+
+  /* Animação ao aparecer */
+  animation: fadeInScale 0.4s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .lightbox-title {
@@ -1848,9 +1915,7 @@ footer {
   color: #01497c;
 }
 
-
-  
-    /*Footer*/
+/*Footer*/
   
     #footer-logo {
       scale: 70%;
