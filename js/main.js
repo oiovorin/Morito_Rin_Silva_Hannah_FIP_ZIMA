@@ -30,32 +30,35 @@ function flipTo(index) {
     });
   }
 
-// Promotion cards
-const readMoreButtons = document.querySelectorAll('.btn[data-index]');
-const lightboxes = document.querySelectorAll('.lightbox1, .lightbox3');
-const closeButtons = document.querySelectorAll('.lightbox-close');
+// Selecione todos os botões com a classe "btn"
+const promoButtons = document.querySelectorAll('.btn');
 
-// Open the corresponding lightbox
-readMoreButtons.forEach(button => {
-  button.addEventListener('click', e => {
-    e.preventDefault();
+// Adicione um event listener para cada botão
+promoButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    // Evitar o comportamento padrão do link
+    event.preventDefault();
+    
+    // Acesse o index do botão clicado usando o atributo data-index
     const index = button.getAttribute('data-index');
-    const lightbox = lightboxes[index];
-    if (lightbox) {
-      lightbox.classList.add('active');
+    
+    // Baseado no index, podemos mostrar um alerta ou abrir uma nova seção com mais informações
+    switch(index) {
+      case '0':
+        alert('Você clicou no ZIMA Coaster! Descubra todos os detalhes e promoções especiais no evento.');
+        break;
+      case '1':
+        alert('Você clicou no ZIMA Bottle Opener! Veja mais sobre nosso abridor de garrafas portátil.');
+        break;
+      case '2':
+        alert('Você clicou no ZIMA Flavored Water! Aproveite a nossa água com sabor e refresque-se!');
+        break;
+      default:
+        alert('Item desconhecido');
     }
   });
 });
 
-// Close lightbox when clicking close button
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const lightbox = button.closest('.lightbox1, .lightbox3');
-    if (lightbox) {
-      lightbox.classList.remove('active');
-    }
-  });
-});
 
 // instagram carousel
 const carousel = document.querySelector('#instagram-pic');
