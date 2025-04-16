@@ -559,6 +559,31 @@ header {
   color: #01497c;
 }
 
+/* lemon style */
+#Lemon {
+  transition: all 0.7s ease;
+}
+
+#Lemon:hover {
+  transform: scaleX(0.6);
+}
+
+#Lemon:hover #outer_skin {
+  fill: coral;
+  transition: fill 0.5s ease
+}
+
+#Lemon:hover #pulp {
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.promo-svg {
+  width: 50px; /* ou qualquer tamanho desejado */
+  height: 50px; /* ou 'auto' se quiser manter a proporção */
+}
+
 
 /* contact page style */
 
@@ -711,25 +736,7 @@ footer {
   display: none;
 }
 
-/* lemon style */
-#Lemon {
-    transition: all 0.7s ease;
-}
 
-#Lemon:hover {
-    transform: scaleX(0.6);
-}
-
-#Lemon:hover #outer_skin {
-    fill: coral;
-    transition: fill 0.5s ease
-}
-
-#Lemon:hover #pulp {
-    transform: scale(1.1);
-    transform-origin: center;
-    transition: transform 0.5s ease;
-}
 
 /*Media Query*/
 
