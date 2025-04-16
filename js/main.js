@@ -1,3 +1,5 @@
+//Bottles in home page 
+
 function flipTo(index) {
     const slides = document.querySelectorAll(".flavor-slide img");
     const dots = document.querySelectorAll(".dot");
@@ -28,12 +30,41 @@ function flipTo(index) {
     });
   }
 
-    
+// Selecione todos os botões com a classe "btn"
+const promoButtons = document.querySelectorAll('.btn');
 
-    
+// Selecione os lightboxes
+const lightbox1 = document.querySelector('.lightbox1');
+const lightboxGroup = document.querySelectorAll('.lightbox3');
 
+// Junta todos em uma lista
+const lightboxes = [lightbox1, ...lightboxGroup];
 
-  
+// Adicione um event listener para cada botão
+promoButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const index = parseInt(button.getAttribute('data-index'));
+
+    // Ocultar todos os lightboxes
+    lightboxes.forEach(lb => lb.style.display = 'none');
+
+    // Exibir o lightbox correspondente
+    if (lightboxes[index]) {
+      lightboxes[index].style.display = 'flex';
+    }
+  });
+});
+
+// Adicione event listener aos botões de fechar
+document.querySelectorAll('.lightbox-close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    const lightbox = closeBtn.closest('.lightbox1, .lightbox3');
+    if (lightbox) lightbox.style.display = 'none';
+  });
+});
+
 
 
 // instagram carousel
