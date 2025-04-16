@@ -26,33 +26,6 @@
       .st5 {
         fill:rgb(48, 128, 57);
       }
-
-      #Grapes {
-        transform: scale(1.2);
-        transform-origin: center;
-      }
-
-       #one_grape, #branch {
-        transition: all 0.8s ease;
-      }
-
-      #Grapes:hover #one_grape {
-        transform: translate(40px);
-      }
-
-      #Grapes:hover #branch {
-        transform: translateY(-10px);
-      }
-
-      <script>
-      const grape = document.querySelector('#Grapes')
-
-      function logId() {
-      console.log(`The ID of this element is: ${this.id}`);
-      }
-
-      grape.addEventListener('click', logId);
-    </script>
     </style>
   </defs>
   <g id="Layer_1">
