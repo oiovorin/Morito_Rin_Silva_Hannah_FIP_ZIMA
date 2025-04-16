@@ -13,8 +13,7 @@
 }
 
 header {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  z-index: 10000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 /*Main Nav*/
@@ -304,13 +303,6 @@ header {
   font-size: 1.8em;
 }
 
-.cocktails {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .cocktails img:hover {
   filter: brightness(0.5);
   transform: scale(1.05);
@@ -318,7 +310,7 @@ header {
 }
 
 .cocktails {
-  margin: 10px 20px;
+  margin: 10px auto;
 }
 
 .cocktails {
@@ -496,20 +488,13 @@ header {
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  
+  transition: background 0.3s;
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
-
-.card a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* Lightbox */
 .lightbox1,
 .lightbox3 {
@@ -524,21 +509,13 @@ header {
   justify-content: center;
   z-index: 1000;
   padding: 20px;
-
-  /* Fade settings */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox1.active,
 .lightbox3.active {
   display: flex;
-  opacity: 1;
-  visibility: visible;
 }
 
-/* Animação interna do conteúdo */
 .lightbox-content,
 .lightbox-content3 {
   background-color: #fff;
@@ -549,20 +526,6 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   text-align: left;
-
-  /* Animação ao aparecer */
-  animation: fadeInScale 0.4s ease forwards;
-}
-
-@keyframes fadeInScale {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .lightbox-title {
@@ -596,7 +559,6 @@ header {
   color: #01497c;
 }
 
-
 /* lemon style */
 #Lemon {
   transition: all 0.7s ease;
@@ -616,6 +578,8 @@ header {
   transform-origin: center;
   transition: transform 0.5s ease;
 }
+
+
 
 /* contact page style */
 
@@ -770,61 +734,12 @@ footer {
 
 
 
-/* lemon style */
-#Lemon {
-  width: 160px;
-  height: auto;
-    transition: all 0.7s ease;
-    margin: 25px;
-}
-
-
-
-#Grapes {
-  width: 130px;
-  height: auto;
-  transform-origin: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
- #one_grape, #branch {
-  transition: all 0.8s ease;
-}
-
-#Grapes:hover #one_grape {
-  transform: translate(40px);
-}
-
-#Grapes:hover #branch {
-  transform: translateY(-10px);
-}
-
-#Logomark {
-  width: 130px;
-  height: auto;
-}
-
-#Logomark:hover #main_flake {
-  transform: rotate(180deg);
-  transform-origin: center;
-  transition: transform 2s ease;
-}
-
-#Logomark:hover #sub_flake {
-  transform: scale(1.1);
-  transform-origin: center;
-  transition: transform 0.7s ease;
-}
-
 /*Media Query*/
 
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.1em;
   }
-
   
   /*Main Nav*/
   
@@ -1018,7 +933,6 @@ footer {
 
   .dot.active {
     background-color: #333;
-    margin-top: 130px;
   }
 
   .bottle-detail {
@@ -1077,20 +991,14 @@ footer {
     text-align: center;
   }
 
-  .promotion-section h2:first-child {
-    font-size: 1.5em;
-    padding: 20px;
-  }
-
   .promotion-section h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #222;
-    margin-top: 40px;
   }
 
   .promotion-section h2 span {
-    color: #01497c;
+    color: #007bff;
   }
 
   .subheading {
@@ -1164,7 +1072,6 @@ footer {
     border-radius: 25px;
     font-weight: bold;
     transition: background 0.3s;
-    height: 160px;
   }
 
   .btn:hover {
@@ -1180,26 +1087,18 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  display: none; 
+  display: none; /* escondido por padrão */
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 20px;
-
-  /* Fade settings */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox1.active,
 .lightbox3.active {
   display: flex;
-  opacity: 1;
-  visibility: visible;
 }
 
-/* Animação interna do conteúdo */
 .lightbox-content,
 .lightbox-content3 {
   background-color: #fff;
@@ -1210,20 +1109,6 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   text-align: left;
-
-  /* Animação ao aparecer */
-  animation: fadeInScale 0.4s ease forwards;
-}
-
-@keyframes fadeInScale {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .lightbox-title {
@@ -1525,10 +1410,6 @@ footer {
     justify-content: space-evenly;
   }
 
-
-  .hero-recipe div {
-    margin: 0 20px;
-  }
   /*Promotion Page*/
   
   #footer-icon div img {
@@ -1843,21 +1724,13 @@ footer {
   justify-content: center;
   z-index: 1000;
   padding: 20px;
-
-  /* Fade settings */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox1.active,
 .lightbox3.active {
   display: flex;
-  opacity: 1;
-  visibility: visible;
 }
 
-/* Animação interna do conteúdo */
 .lightbox-content,
 .lightbox-content3 {
   background-color: #fff;
@@ -1868,20 +1741,6 @@ footer {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   text-align: left;
-
-  /* Animação ao aparecer */
-  animation: fadeInScale 0.4s ease forwards;
-}
-
-@keyframes fadeInScale {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .lightbox-title {
@@ -1915,7 +1774,9 @@ footer {
   color: #01497c;
 }
 
-/*Footer*/
+
+  
+    /*Footer*/
   
     #footer-logo {
       scale: 70%;
