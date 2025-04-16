@@ -26,6 +26,8 @@ git clone https://github.com/your-username/music-mixer.git
 
 **Promotion Page**
 
+1. click svg -> promotion detail show up
+
 
 ## Features
 - **Pop up details** → showed product details when user click.
