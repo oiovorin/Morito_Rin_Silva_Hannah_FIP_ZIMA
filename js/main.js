@@ -30,27 +30,27 @@ function flipTo(index) {
     });
   }
 
-// Selecione todos os botões com a classe "btn"
+// Select all buttons with class "btn"
 const promoButtons = document.querySelectorAll('.btn');
 
-// Selecione os lightboxes
+// Select lightboxes
 const lightbox1 = document.querySelector('.lightbox1');
 const lightboxGroup = document.querySelectorAll('.lightbox3');
 
-// Junta todos em uma lista
+// Put them all together in one list
 const lightboxes = [lightbox1, ...lightboxGroup];
 
-// Adicione um event listener para cada botão
+// Add an event listener for each button
 promoButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
 
     const index = parseInt(button.getAttribute('data-index'));
 
-    // Ocultar todos os lightboxes
+    // Hide all lightboxes
     lightboxes.forEach(lb => lb.style.display = 'none');
 
-    // Exibir o lightbox correspondente
+    // Display the corresponding lightbox
     if (lightboxes[index]) {
       lightboxes[index].style.display = 'flex';
     }
