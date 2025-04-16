@@ -30,109 +30,32 @@ function flipTo(index) {
     });
   }
 
-// Dados para exibir no lightbox (pode ser alterado conforme necessidade)
-const lightboxData = [
-  {
-    title: "Original Design Coaster",
-    description: "Get a ZIMA original design coaster at the sports event we sponsored!",
-    img: "images/coaster.jpeg"
-  },
-  {
-    title: "Bottle Opener",
-    description: "We have portable key chain bottle opener.",
-    img: "images/openner.jpeg"
-  },
-  {
-    title: "Flavored Water",
-    description: "Collaborate with smartwater, we have ZIMA original flavored water. Enjoy refresh, cool, and new version of ZIMA.",
-    img: "images/water.jpeg"
-  }
-];
+// Promotion cards
+const readMoreButtons = document.querySelectorAll('.btn[data-index]');
+const lightboxes = document.querySelectorAll('.lightbox1, .lightbox3');
+const closeButtons = document.querySelectorAll('.lightbox-close');
 
-// Criação do lightbox no DOM
-const lightbox = document.createElement("div");
-lightbox.classList.add("lightbox");
-lightbox.innerHTML = `
-  <div class="lightbox-content">
-    <button class="lightbox-close" aria-label="Close lightbox">×</button>
-    <img src="" alt="" class="lightbox-img">
-    <h2 class="lightbox-title"></h2>
-    <p class="lightbox-desc"></p>
-  </div>
-`;
-document.body.appendChild(lightbox);
-
-// Estilo básico do lightbox (você pode mover isso para seu CSS se preferir)
-const style = document.createElement("style");
-style.textContent = `
-  .lightbox {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  .lightbox-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 500px;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-  }
-  .lightbox-img {
-    max-width: 100%;
-    border-radius: 1rem;
-  }
-  .lightbox-close {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-  }
-`;
-document.head.appendChild(style);
-
-// Lógica de abertura do lightbox
-document.querySelectorAll('.btn').forEach(btn => {
-  btn.addEventListener('click', e => {
+// Open the corresponding lightbox
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', e => {
     e.preventDefault();
-    const index = btn.getAttribute('data-index');
-    const data = lightboxData[index];
-
-    // Atualizar os dados do lightbox
-    document.querySelector('.lightbox-img').src = data.img;
-    document.querySelector('.lightbox-title').textContent = data.title;
-    document.querySelector('.lightbox-desc').textContent = data.description;
-
-    // Exibir o lightbox
-    lightbox.style.display = 'flex';
+    const index = button.getAttribute('data-index');
+    const lightbox = lightboxes[index];
+    if (lightbox) {
+      lightbox.classList.add('active');
+    }
   });
 });
 
-// Lógica de fechamento do lightbox
-document.querySelector('.lightbox-close').addEventListener('click', () => {
-  lightbox.style.display = 'none';
+// Close lightbox when clicking close button
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const lightbox = button.closest('.lightbox1, .lightbox3');
+    if (lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
 });
-
-// Fechar o lightbox ao clicar fora do conteúdo
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
-  }
-});
-
-
 
 // instagram carousel
 const carousel = document.querySelector('#instagram-pic');
